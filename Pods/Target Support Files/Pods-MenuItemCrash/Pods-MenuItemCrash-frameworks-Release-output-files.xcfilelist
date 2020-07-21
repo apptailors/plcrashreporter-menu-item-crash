@@ -1,0 +1,3 @@
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Backtrace_PLCrashReporter.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CrashReporter.framework
+${DWARF_DSYM_FOLDER_PATH}/CrashReporter.framework.dSYM

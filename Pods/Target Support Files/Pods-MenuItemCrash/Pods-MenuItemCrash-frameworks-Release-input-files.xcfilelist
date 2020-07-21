@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-MenuItemCrash/Pods-MenuItemCrash-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Backtrace-PLCrashReporter/Backtrace_PLCrashReporter.framework
+${PODS_ROOT}/PLCrashReporter/Mac OS X Framework/CrashReporter.framework
+${PODS_ROOT}/PLCrashReporter/Mac OS X Framework/CrashReporter.framework.dSYM

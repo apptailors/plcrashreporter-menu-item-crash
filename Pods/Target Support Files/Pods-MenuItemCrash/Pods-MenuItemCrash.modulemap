@@ -1,0 +1,6 @@
+framework module Pods_MenuItemCrash {
+  umbrella header "Pods-MenuItemCrash-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,14 +1,11 @@
-//
-//  AppDelegate.m
-//  MenuItemCrash
-//
-//  Created by Marcin Karmelita on 21/07/2020.
-//  Copyright © 2020 Marcin Karmelita. All rights reserved.
-//
-
 #import "AppDelegate.h"
+// Uncomment selected crash reporter.
+//#import <Backtrace_PLCrashReporter/CrashReporter.h>
+#import <CrashReporter/CrashReporter.h>
 
-@interface AppDelegate ()
+@interface AppDelegate ()<NSMenuDelegate, NSMenuItemValidation>
+@property (weak) IBOutlet NSMenu *menu;
+@property (weak) IBOutlet NSMenuItem *menuItem;
 
 @end
 
@@ -16,6 +13,10 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    [PLCrashReporter.sharedReporter enableCrashReporter];
+    self.menu.delegate = self;
+    self.menuItem.target = self;
+    self.menuItem.action = @selector(foo);
 }
 
 
@@ -23,5 +24,19 @@
     // Insert code here to tear down your application
 }
 
+- (void) foo {
+    
+}
+
+-(NSString *) concatString:(NSString*) s1 toString:(NSString *) s2 {
+    return [s1 stringByAppendingString:s2];
+}
+
+- (BOOL) validateMenuItem:(NSMenuItem *)item {
+    BOOL result = NO;
+    NSLog(@"%@", [self concatString:@"bob" toString:nil]);
+    
+    return result;
+}
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DA1D069E39F2DAAB8C2EB3D /* Pods_MenuItemCrash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E59173560E2944916E0307 /* Pods_MenuItemCrash.framework */; };
 		F214701224C7244200EF002C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F214701124C7244200EF002C /* AppDelegate.m */; };
 		F214701524C7244200EF002C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F214701424C7244200EF002C /* ViewController.m */; };
 		F214701724C7244300EF002C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F214701624C7244300EF002C /* Assets.xcassets */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43E59173560E2944916E0307 /* Pods_MenuItemCrash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MenuItemCrash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64BAC1D58355611D3A9CE5AD /* Pods-MenuItemCrash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MenuItemCrash.debug.xcconfig"; path = "Target Support Files/Pods-MenuItemCrash/Pods-MenuItemCrash.debug.xcconfig"; sourceTree = "<group>"; };
+		65489ABE00EBB19FA3B05FDA /* Pods-MenuItemCrash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MenuItemCrash.release.xcconfig"; path = "Target Support Files/Pods-MenuItemCrash/Pods-MenuItemCrash.release.xcconfig"; sourceTree = "<group>"; };
 		F214700D24C7244200EF002C /* MenuItemCrash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenuItemCrash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F214701024C7244200EF002C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F214701124C7244200EF002C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -32,17 +36,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DA1D069E39F2DAAB8C2EB3D /* Pods_MenuItemCrash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B783046E50832ECB3D7AD478 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43E59173560E2944916E0307 /* Pods_MenuItemCrash.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F214700424C7244200EF002C = {
 			isa = PBXGroup;
 			children = (
 				F214700F24C7244200EF002C /* MenuItemCrash */,
 				F214700E24C7244200EF002C /* Products */,
+				F9BB181717478B1020DF8952 /* Pods */,
+				B783046E50832ECB3D7AD478 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +85,16 @@
 			path = MenuItemCrash;
 			sourceTree = "<group>";
 		};
+		F9BB181717478B1020DF8952 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				64BAC1D58355611D3A9CE5AD /* Pods-MenuItemCrash.debug.xcconfig */,
+				65489ABE00EBB19FA3B05FDA /* Pods-MenuItemCrash.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F214702124C7244400EF002C /* Build configuration list for PBXNativeTarget "MenuItemCrash" */;
 			buildPhases = (
+				BB0CA9139092120278E2883B /* [CP] Check Pods Manifest.lock */,
 				F214700924C7244200EF002C /* Sources */,
 				F214700A24C7244200EF002C /* Frameworks */,
 				F214700B24C7244200EF002C /* Resources */,
+				E7D9D497DCBE85B4B37B9A8A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +160,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BB0CA9139092120278E2883B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MenuItemCrash-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7D9D497DCBE85B4B37B9A8A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MenuItemCrash/Pods-MenuItemCrash-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MenuItemCrash/Pods-MenuItemCrash-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MenuItemCrash/Pods-MenuItemCrash-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F214700924C7244200EF002C /* Sources */ = {
@@ -270,6 +339,7 @@
 		};
 		F214702224C7244400EF002C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64BAC1D58355611D3A9CE5AD /* Pods-MenuItemCrash.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MenuItemCrash/MenuItemCrash.entitlements;
@@ -289,6 +359,7 @@
 		};
 		F214702324C7244400EF002C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65489ABE00EBB19FA3B05FDA /* Pods-MenuItemCrash.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MenuItemCrash/MenuItemCrash.entitlements;
