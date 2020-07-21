@@ -3,21 +3,18 @@ PODS:
   - PLCrashReporter (1.7.1)
 
 DEPENDENCIES:
-  - Backtrace-PLCrashReporter (from `../plcrashreporter/Backtrace-PLCrashReporter.podspec`)
+  - Backtrace-PLCrashReporter
   - PLCrashReporter
 
 SPEC REPOS:
   trunk:
+    - Backtrace-PLCrashReporter
     - PLCrashReporter
-
-EXTERNAL SOURCES:
-  Backtrace-PLCrashReporter:
-    :path: "../plcrashreporter/Backtrace-PLCrashReporter.podspec"
 
 SPEC CHECKSUMS:
   Backtrace-PLCrashReporter: 71ddeba11834d2bcc3c19f357aaec7bf87131f89
   PLCrashReporter: 92835a24d850ff8026e283a83ed8ce1be9da333f
 
-PODFILE CHECKSUM: 86eb98b508fa6f9a2b430e4fe6f6ab30435c4801
+PODFILE CHECKSUM: ad4c148f3e28aec57018b856e326e90a7a017106
 
 COCOAPODS: 1.9.3

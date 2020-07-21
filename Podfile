@@ -7,5 +7,9 @@ target 'MenuItemCrash' do
 
   # Pods for MenuItemCrash
   pod 'PLCrashReporter'
-  pod 'Backtrace-PLCrashReporter', :path => "../plcrashreporter/Backtrace-PLCrashReporter.podspec"
+  # Please uncomment only one version of Backtrace-PLCrashReporter at the same time
+  # The latest stable PLCrashReporter version provided by Backtrace
+  pod 'Backtrace-PLCrashReporter'
+  # Experimental PLCrashReporter version provided by Backtrace
+  # pod 'Backtrace-PLCrashReporter', :git => 'https://github.com/backtrace-labs/plcrashreporter.git', :branch => 'feature/merge-microsoft-changes'
 end
